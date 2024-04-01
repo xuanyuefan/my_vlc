@@ -1337,10 +1337,12 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
                 }
                 return true
             }
+            /* 
             KeyEvent.KEYCODE_Z -> {
                 resizeVideo()
                 return true
             }
+            */
             KeyEvent.KEYCODE_VOLUME_DOWN -> {
                 volumeDown()
                 return true
@@ -1353,10 +1355,12 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
                 onAudioSubClick(if (overlayDelegate.isHudBindingInitialized()) overlayDelegate.hudBinding.playerOverlayTracks else null)
                 return true
             }
+            /* 
             KeyEvent.KEYCODE_C -> {
                 resizeVideo()
                 return true
             }
+            */
         }
         if (playerKeyListenerDelegate.onKeyDown(keyCode, event)) return true
         return super.onKeyDown(keyCode, event)
